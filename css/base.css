@@ -1,0 +1,58 @@
+/*reset css 重置样式*/
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    /*设置盒模型  让宽度从边框开始计算 为了防止内容的溢出,出现横向的滚动条*/
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    /*清除点击高亮效果*/
+    -webkit-tap-highlight-color: transparent;
+}
+ul{
+    list-style: none;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+input{
+    border: none;
+    outline: none;
+    /*在移动端浏览器  去除样式不干净   立体样式的残留 */
+    -webkit-appearance: none;
+}
+/*common css 公用样式*/
+.ml10{
+    margin-left: 10px;
+}
+.mr10{
+    margin-right: 10px;
+}
+.mt10{
+    margin-top: 10px;
+}
+.mb10{
+    margin-bottom: 10px;
+}
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    clear: both;
+    /*只有块级元素管用*/
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+/*使用精灵图的公用样式*/
+[class^="icon_"]{
+    background: url("../images/sprites.png") no-repeat 0 0/200px 200px;
+}
